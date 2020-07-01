@@ -1,0 +1,57 @@
+.poweredBy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, .8);
+  font-size: 8px;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, .15);
+  z-index: 20;
+}
+
+.poweredBy .sashido {
+  margin: 0 6px;
+  opacity: .8;
+}
+
+.poweredBy .heart {
+  margin-left: 4px;
+  font-size: 30px;
+  transform-origin: 50%;
+  opacity: .8;
+  animation: heartbeat 1.2s infinite;
+  fill: #fff;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

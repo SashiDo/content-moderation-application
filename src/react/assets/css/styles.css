@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: salmon;
+  background: linear-gradient(-238deg, #fff, #fd8800, #fd008f, #9700fd, #3c60d2, #05c7e6, #4bd58d, #fff);
+  background-size: 1200% 1200%;
+  animation: rainbow 120s ease infinite;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

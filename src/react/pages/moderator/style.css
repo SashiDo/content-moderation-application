@@ -1,0 +1,278 @@
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 4px solid rgba(255, 255, 255, .75);
+  border-top-color: rgba(255, 255, 255, .2);
+  border-radius: 100%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 1s linear;
+  animation: spinnerAnimation .6s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes spinnerAnimation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.allDoneMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity .4s 1s linear;
+  pointer-events: none;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reject {
+  color: #fd008f;
+}
+
+.accept {
+  color: #15b160;
+}
+
+.header {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .075) 0%, transparent 100%);
+  z-index: 10;
+}
+
+.headerHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  max-width: 600px;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.header .github {
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .logout {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.controls {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  padding: 0 20px;
+  max-width: 400px;
+  width: 100%;
+  height: 96px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity .4s linear;
+  z-index: 10;
+}
+
+.controls .button {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.controls .icon {
+  display: block;
+  position: relative;
+  width: 58px;
+  height: 58px;
+  font-size: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.controls i:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.count {
+  color: #fff;
+  font-size: 16px;
+  opacity: .8;
+  white-space: nowrap;
+}
+
+.cards {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.cards.show {
+  opacity: 1;
+  transition: opacity .4s 1s linear;
+}
+
+.cards.hide {
+  opacity: 0;
+  transition: opacity .4s 0 linear;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  user-select: none;
+}
+
+.card>div {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  width: 100%;
+  height: 100%;
+  max-width: 268px;
+  max-height: 476px;
+  border-radius: 10px;
+  background-color: #fff;
+  background-position: center center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  will-change: transform;
+}
+
+.img {
+  height: 100%;
+  border-radius: 6px 6px 0 0;
+  background: no-repeat center center fixed;
+  background-size: contain;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.predictions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 9px;
+  padding: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity .4s ease;
+  will-change: opacity;
+}
+
+.predictionsRow {
+  display: flex;
+  align-items: center;
+  height: 14px;
+}
+
+.predictionsRow div:first-child {
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+.predictionsRow div:last-child {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.predictions .progress {
+  height: 14px;
+  border-radius: 10px;
+  height: 5px;
+  background-color: #fd008f;
+}
+
+.copy {
+  padding: 4px 4px 0;
+  font-size: 9px;
+  color: #b2b2b2;
+  border-top: 1px dotted #ededed;
+}
+
+
+.gradientMask {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  left: 6px;
+  height: 100%;
+  opacity: 0;
+  color: #fff;
+  pointer-events: none;
+  border-radius: 6px;
+  background: none;
+  z-index: 4;
+}
+
+.gradientMask .icon {
+  position: absolute;
+  top: 20px;
+  width: 74px;
+  height: 74px;
+  font-size: 80px;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .75);
+  border: 2px solid #fff;
+}
+
+.gradientMask .reject {
+  right: 20px;
+}
+
+.gradientMask .accept {
+  left: 20px;
+}
